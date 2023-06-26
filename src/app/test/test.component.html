@@ -1,0 +1,23 @@
+
+<h1>Learning Basic Angular</h1>
+
+<!-- <input type="text" [(ngModel)] = "username"> [(ngModel)] always provides two-way data binding  -->
+<!-- () - Event binding - from html to ts -->
+<!-- [] - property binding - from ts to html -->
+<!-- {{}} - string interpolation - from ts to html-->
+<input type="text" (input)="setUsername($event)">
+<button [disabled]="btndisabled" [ngClass]="{disabled : btndisabled, enabled : !btndisabled}" >Set</button> 
+<!-- ngClass or ngStyle both are attribute directives -->
+<p *ngIf="username!=='Ravi'">
+    {{username}}
+    <!-- Structural Directive -->
+</p>
+
+<p *ngFor="let game of games">
+    {{game}}
+    <!-- Structural Directive... takes an iterable and manipulates the DOM according -->
+</p>
+
+<p>
+    {{data}}
+</p>
